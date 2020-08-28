@@ -22,7 +22,12 @@ module Liquid
         assigns.merge!(local_assigns.stringify_keys)
 
         liquid      = Liquid::Template.parse(template)
-        liquid.send(render_method, assigns, filters: filters, registers: registers).html_safe
+        liquid.send(render_method, assigns,
+          filters: filters,
+          registers: registers,
+          strict_variables: true,
+          strict_filters: true
+        ).html_safe
       end
 
       def filters
