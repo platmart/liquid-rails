@@ -21,6 +21,8 @@ ENV['RAILS_ENV'] = 'test'
 require File.expand_path('../dummy/config/environment.rb',  __FILE__)
 require 'pry'
 require 'liquid-rails'
+require 'liquid-rails/tags'
+require 'liquid-rails/filters'
 require 'rspec/rails'
 require 'capybara/rspec'
 require 'liquid-rails/matchers'

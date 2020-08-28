@@ -20,4 +20,4 @@ module Liquid
 end
 
 require 'liquid-rails/railtie' if defined?(Rails)
-Dir[File.dirname(__FILE__) + '/liquid-rails/{filters,tags,drops}/*.rb'].each { |f| require f }
+Dir[File.dirname(__FILE__) + '/liquid-rails/{drops}/*.rb'].each { |f| require f }
